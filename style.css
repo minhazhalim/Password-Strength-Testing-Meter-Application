@@ -1,0 +1,43 @@
+*,*::before,*::after {
+     box-sizing: border-box;
+}
+body {
+     background-color: hsl(261,88%,17%);
+     color: hsl(261,88%,90%);
+     text-align: center;
+}
+h1 {
+     text-transform: capitalize;
+}
+.strength-meter {
+     position: relative;
+     width: 90%;
+     height: 2rem;
+     border: 3px solid hsl(261,88%,57%);
+     border-radius: 1rem;
+     margin: 0rem auto;
+     overflow: hidden;
+}
+.strength-meter::before {
+     content: "";
+     position: absolute;
+     left: 0%;
+     width: calc(1% * var(--strength,0));
+     height: 100%;
+     background-color: hsl(261,88%,67%);
+     transition: width 200ms;
+}
+.password-input {
+     margin-top: 1rem;
+     width: 90%;
+     padding: 0.25rem 0.75rem;
+     background-color: hsl(261,88%,25%);
+     color: white;
+     border: 1px solid hsl(261,88%,57%);
+     border-radius: 0.3rem;
+     outline: none;
+     text-align: center;
+}
+.password-input:focus {
+     border-color: hsl(261,88%,70%);
+}
